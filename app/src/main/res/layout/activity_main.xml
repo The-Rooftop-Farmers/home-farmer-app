@@ -9,35 +9,49 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
-    <!-- This LinearLayout contains the main content area and the toolbar -->
+    <!-- This is the main content area of the app -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <!-- The Toolbar at the top of the screen -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.HomeFarmerApp.AppBarOverlay">
 
-        <!-- The container where all your Fragments will be displayed -->
-        <FrameLayout
-            android:id="@+id/content_frame"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.HomeFarmerApp.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- This is the container where your fragments (Home, Gallery, etc.) will be displayed -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment_content_main"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation" />
 
     </LinearLayout>
 
-    <!-- The NavigationView that slides out from the left -->
+    <!-- This is the NavigationView with the dark theme styling -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/drawer_menu" />
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        android:background="@color/black_dark"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -1,27 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!--
-    Base application theme.
-    This is now a permanent Dark Theme. The parent is changed to remove DayNight switching.
-    -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
     <style name="Theme.HomeFarmerApp" parent="Theme.MaterialComponents.NoActionBar">
-        <!-- Primary brand color (Light Green for Dark Theme) -->
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/green_light</item>
         <item name="colorPrimaryVariant">@color/green_light</item>
         <item name="colorOnPrimary">@color/black</item>
-
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/green_light</item>
         <item name="colorSecondaryVariant">@color/green_light</item>
         <item name="colorOnSecondary">@color/black</item>
-
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/black_dark</item>
-
-        <!-- Background colors -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black_dark</item>
+        <!-- Customize your theme here. -->
         <item name="android:colorBackground">@color/black_dark</item>
         <item name="colorSurface">@color/black_dark</item>
         <item name="colorOnBackground">@color/white</item>
         <item name="colorOnSurface">@color/white</item>
     </style>
+
+    <!--
+    This is the missing style for the AppBar. It defines how the AppBar looks.
+    We are adding it back here.
+    -->
+    <style name="Theme.HomeFarmerApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--
+    This is the missing style for the popup menus.
+    We are adding it back here.
+    -->
+    <style name="Theme.HomeFarmerApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
