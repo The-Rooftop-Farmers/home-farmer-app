@@ -1,0 +1,57 @@
+# =================================================================================
+# General .gitignore for Android Studio Projects (compatible with IntelliJ IDEA)
+# =================================================================================
+
+# IDE-specific files (IntelliJ, Android Studio)
+# =============================================
+# User-specific files and settings.
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.DS_Store
+
+# Local configuration that should not be shared.
+# Contains machine-specific paths (e.g., SDK location).
+local.properties
+
+# Gradle files
+# =============================================
+# Gradle's build cache and wrapper files.
+.gradle/
+build/
+!build/kotlin/compile* # Keep compile logs for debugging if needed, but usually ignored
+
+# Generated files
+# =============================================
+# APKs, AABs, and other build outputs.
+*.apk
+*.aab
+*.ap_
+*.apks
+*.dex
+*.jar
+*.class
+
+# Keystore files (VERY IMPORTANT to ignore)
+# =============================================
+# Contains your app's signing keys. Never commit these.
+*.jks
+*.keystore
+keystore.properties
+
+# Other generated files
+# =============================================
+# Log files
+*.log
+
+# Memory heap dump files
+*.hprof
+
+# Test reports and outputs
+/captures/
+.cxx/
+*~
