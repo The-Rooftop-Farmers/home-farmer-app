@@ -1,64 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
-
+    android:layout_height="match_parent">
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Functions"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_green"
+            android:paddingBottom="18dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert cm to Steps"
+            android:textColor="@color/light_green"
+            android:textSize="18sp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter cm"
+            android:inputType="numberDecimal"
+            android:textColor="@color/light_green"
+            android:textColorHint="@color/light_green"
+            android:backgroundTint="@color/light_green"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/light_green"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert Steps to cm"
+            android:textColor="@color/light_green"
+            android:textSize="18sp"
+            android:paddingTop="24dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter steps"
+            android:inputType="numberDecimal"
+            android:textColor="@color/light_green"
+            android:textColorHint="@color/light_green"
+            android:backgroundTint="@color/light_green"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/light_green"
+            android:layout_marginTop="8dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Manual Controls"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-        <com.google.android.material.card.MaterialCardView
+            android:textColor="@color/light_green"
+            android:textSize="18sp"
+            android:paddingTop="24dp"/>
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            android:layout_marginBottom="12dp">
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/switch_lights"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Grow Lights"
-                android:textSize="18sp"
-                android:padding="16dp"/>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
+            android:text="Water Plant"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/light_green"/>
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            android:layout_marginBottom="12dp">
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/switch_water_pump"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Water Pump"
-                android:textSize="18sp"
-                android:padding="16dp"/>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            android:layout_marginBottom="12dp">
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/switch_fans"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ventilation Fans"
-                android:textSize="18sp"
-                android:padding="16dp"/>
-        </com.google.android.material.card.MaterialCardView>
-
+            android:text="Plant Seed"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/light_green"
+            android:layout_marginTop="8dp"/>
     </LinearLayout>
 </ScrollView>

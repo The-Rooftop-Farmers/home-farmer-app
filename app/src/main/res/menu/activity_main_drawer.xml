@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home" android:title="Home" android:icon="@android:drawable/ic_menu_view"/>
+        <item android:id="@+id/nav_plants" android:title="Plants" android:icon="@android:drawable/ic_menu_agenda"/>
+        <item android:id="@+id/nav_camera" android:title="Camera" android:icon="@android:drawable/ic_menu_camera"/>
+        <item android:id="@+id/nav_functions" android:title="Functions" android:icon="@android:drawable/ic_menu_manage"/>
+        <item android:id="@+id/nav_about" android:title="About Us" android:icon="@android:drawable/ic_menu_info_details"/>
+        <item android:id="@+id/nav_contact" android:title="Contact Support" android:icon="@android:drawable/ic_menu_send"/>
+    </group>
+</menu>

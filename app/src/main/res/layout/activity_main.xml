@@ -1,57 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
-    tools:openDrawer="start">
+    android:background="@color/black"
+    tools:context=".MainActivity">
 
-    <!-- This is the main content area of the app -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/black">
 
-        <!-- The Toolbar at the top of the screen -->
-        <com.google.android.material.appbar.AppBarLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/Theme.HomeFarmerApp.AppBarOverlay">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            app:titleTextColor="@color/light_green"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/Theme.HomeFarmerApp.PopupOverlay" />
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <!-- This is the container where your fragments (Home, Gallery, etc.) will be displayed -->
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_fragment_content_main"
+            android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/mobile_navigation" />
-
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:navGraph="@navigation/nav_graph"
+            app:defaultNavHost="true"/>
     </LinearLayout>
 
-    <!-- This is the NavigationView with the dark theme styling -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
+        android:background="@color/black"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer"
-        android:background="@color/black_dark"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white" />
-
+        app:itemIconTint="@color/light_green"
+        app:itemTextColor="@color/light_green"
+        app:menu="@menu/activity_main_drawer"/>
 </androidx.drawerlayout.widget.DrawerLayout>

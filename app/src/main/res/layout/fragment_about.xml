@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About The Rooftop Farmers"
+            android:textColor="@color/light_green"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:paddingBottom="18dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_green"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="The Rooftop Farmers is a smart gardening app and robotics project aimed at automating plant care and providing live monitoring and manual override for urban farmers. This demo app showcases plant status, live camera, remote controls and more."/>
+    </LinearLayout>
+</ScrollView>

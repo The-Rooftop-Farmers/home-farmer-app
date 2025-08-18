@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="org.therooftopfarmers.homefarmerapp.ui.home.HomeFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/nav_plants"
+        android:name="org.therooftopfarmers.homefarmerapp.ui.plants.PlantsFragment"
+        android:label="Plants" />
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="org.therooftopfarmers.homefarmerapp.ui.camera.CameraFragment"
+        android:label="Camera" />
+    <fragment
+        android:id="@+id/nav_functions"
+        android:name="org.therooftopfarmers.homefarmerapp.ui.functions.FunctionsFragment"
+        android:label="Functions" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="org.therooftopfarmers.homefarmerapp.ui.about.AboutFragment"
+        android:label="About Us" />
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="org.therooftopfarmers.homefarmerapp.ui.contact.ContactFragment"
+        android:label="Contact Support" />
+</navigation>
